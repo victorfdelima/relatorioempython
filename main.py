@@ -1,5 +1,6 @@
 import pandas as pd
 
+# Utilizei caminho do documento, no caso no Google Drive
 tabela_vendas = pd.read_excel("/content/drive/MyDrive/Colab Notebooks/Vendas.xlsx")
 
 tabela_faturamento = tabela_vendas[["ID Loja", "Valor Final"]].groupby("ID Loja").sum("Valor Final")
